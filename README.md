@@ -1,6 +1,6 @@
 # Projeto-Integrador 
 
-Alunos: Cauâ, Esdras Souza e Luan
+Alunos: Cauâ, Esdras e Luan
 
 Assunto:
 
