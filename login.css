@@ -30,7 +30,7 @@ body {
     width: 275px;
     height: 250px;
     text-align: center;
-    background-image: url(/Imagens/fundoDoLogin.png);
+    background-image: url(Imagens/fundoDoLogin.png);
     font-size: 20px;
     background-size: 100%;
     background-repeat: space;
