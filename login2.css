@@ -1,0 +1,58 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 99%;
+    height: 99%;
+    background-image: url(Imagens/PaisagemUrbana.png);
+    background-repeat: round;
+}
+
+.Logo>figure>img {
+    height: 60%;
+    width: 50%;
+}
+
+.Logo>figure {
+    margin-bottom: 1px;
+}
+
+.Logo>h3 {
+    background-color: white;
+    border: 2px solid #000000;
+    margin-top: 1px;
+}
+
+.Logo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+
+.Login {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: white;
+    outline: 10px solid #000000;
+    outline-offset: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.Login>.incorreto {
+    display: block;
+    position: absolute;
+    color: red;
+}
