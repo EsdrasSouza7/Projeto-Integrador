@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+
+    height: 48px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    border-bottom: 1px black solid;
+    margin-top: 2px;
+    background-color: #f3f3f3;
+}
+
+#logo {
+    height: 45px;
+}
+
+.switch__container {
+    margin-top: 7px;
+    float: left;
+    height: 100%;
+}
