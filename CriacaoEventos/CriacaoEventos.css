@@ -1,45 +1,63 @@
-body {
-    background-color: #1e1e1e;
+.Conteudo {
+    height: 100%;
+    width: 76%;
+    top: 49px;
+    left: 224px;
+    position: relative;
+    margin: 4px;
+
+
 }
 
-header {
-    background-color: #0d0d0d;
-    border-bottom: 1px white solid;
+.BtnCriar {
+    left: 27%;
+    position: relative;
 }
 
-header a {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
+.BtnCriar button {
+    background-color: #5ff5ff;
+    border-radius: 50%;
+    width: 100px;
 }
 
-header a:hover {
-    color: gray;
+.NomedoEvento,
+.Descricao {
+    float: inline-start;
+    width: 50%;
 }
 
-.BarraLateral {
-    background-color: #0d0d0d;
-    border-right: 1px white solid;
+.Imagem {
+    float: right;
 }
 
-.Quadrante1 {
-    border-bottom: 1px black solid;
-    color: white;
+.Pergunta {
+    width: 50%;
+    min-width: 400px;
+
 }
 
-.Quadrante2 button {
-    background-color: #00919B;
-    color: white;
+.Pergunta input {
+    background-color: #d9d9d9;
+    border: 1px black solid;
 }
 
-.Eventos>a {
-    color: white;
+.Perguntas {
+    width: 50%;
+    min-width: 400px;
+    background-color: #f0f0f0;
+    border: 1px black solid;
 }
 
-.Historico {
-    border-bottom: 1px white solid;
+.respostas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 20%;
+
 }
 
-.Historico>a {
-    color: white;
+.res {
+    height: 10px;
+    width: 10px;
+    background-color: #d9d9d9;
+    margin: 15px;
 }
