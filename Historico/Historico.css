@@ -1,7 +1,59 @@
 .Conteudo {
     height: 100%;
-    width: 100%;
+    width: 80%;
     top: 49px;
     left: 224px;
     position: relative;
+}
+
+.Conteudo h1,
+p {
+    font-weight: bold;
+}
+
+.Conteudo p,
+.eventos {
+    border-bottom: 1px black solid;
+}
+
+.Conteudo button {
+    position: relative;
+    border-radius: 45%;
+    bottom: 40px;
+    left: 56px;
+    width: 20px;
+    height: 20px;
+}
+
+.eventos,
+.aulas {
+    display: flex;
+    grid-template-columns: auto;
+}
+
+.nomeEventos,
+.tabela,
+.nomeAulas {
+    position: relative;
+    border: 1px black solid;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.nomeEventos p,
+.tabela p,
+.nomeAulas p {
+    text-align: center;
+}
+
+.nomeEventos a,
+.nomeAulas a {
+    border: 1px solid black;
+    position: relative;
+    text-decoration: dashed;
+    color: black;
+    left: 261px;
+    top: 367px;
 }
