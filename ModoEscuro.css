@@ -1,0 +1,45 @@
+body {
+    background-color: #1e1e1e;
+}
+
+header {
+    background-color: #0d0d0d;
+    border-bottom: 1px white solid;
+}
+
+header a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: gray;
+}
+
+.BarraLateral {
+    background-color: #0d0d0d;
+    border-right: 1px white solid;
+}
+
+.Quadrante1 {
+    border-bottom: 1px black solid;
+    color: white;
+}
+
+.Quadrante2 button {
+    background-color: #00919B;
+    color: white;
+}
+
+.Eventos>a {
+    color: white;
+}
+
+.Historico {
+    border-bottom: 1px white solid;
+}
+
+.Historico>a {
+    color: white;
+}
