@@ -4,6 +4,7 @@
     top: 49px;
     left: 224px;
     position: relative;
+    margin: 4px;
 }
 
 .Conteudo h1,
@@ -11,18 +12,32 @@ p {
     font-weight: bold;
 }
 
-.Conteudo p,
-.eventos {
+.Conteudo p {
     border-bottom: 1px black solid;
 }
 
 .Conteudo button {
     position: relative;
-    border-radius: 45%;
-    bottom: 40px;
-    left: 56px;
+    bottom: 42px;
+    left: 55px;
     width: 20px;
     height: 20px;
+    /* border: 1px black solid; */
+    background-image: url(../Imagens/SeteBaixoBranca.png);
+    background-size: 99%;
+    background-repeat: no-repeat;
+}
+
+.Conteudo button[aria-expanded="false"]:hover {
+    background-image: url(../Imagens/SeteBaixoBrancaHover.png);
+}
+
+.Conteudo button[aria-expanded="true"] {
+    background-image: url(../Imagens/SeteCimaBranca.png);
+}
+
+.Conteudo button[aria-expanded="true"]:hover {
+    background-image: url(../Imagens/SeteCimaBrancaHover.png);
 }
 
 .eventos,

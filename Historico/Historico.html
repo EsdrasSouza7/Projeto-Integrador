@@ -62,8 +62,11 @@
     <div class="Conteudo">
         <h1>Historico</h1>
         <p>Evento</p>
-        <button name="btnEvento" type="button"></button>
-        <div class="eventos">
+        <!-- <button name="btnEvento" type="button"></button> -->
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEvento"
+            aria-expanded="false" aria-controls="collapseEvento">
+        </button>
+        <div class="eventos collapse" id="collapseEvento">
             <div class="nomeEventos">
                 <p>Nomes</p>
                 <a href="#">Mostrar mais</a>
@@ -73,9 +76,12 @@
             </div>
         </div>
         <p>Aula</p>
-        <button name="btnAula" type="button"></button>
-        <div class="aulas">
-            <div class="nomeAulas">
+        <!-- <button name="btnAula" type="button"></button> -->
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAula" aria-expanded="false"
+            aria-controls="collapseAula">
+        </button>
+        <div class="aulas collapse" id="collapseAula">
+            <div class=" nomeAulas">
                 <p>Aulas</p>
                 <a href="#">Mostrar mais</a>
             </div>
