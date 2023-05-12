@@ -1,0 +1,15 @@
+.Conteudo {
+    height: 100%;
+    top: 49px;
+    position: relative;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.qrcode > img{
+    width: 100%;
+    image-resolution: 1280dpi;
+    border: 1px black solid;
+}
