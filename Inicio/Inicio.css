@@ -6,9 +6,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(to right,
-      rgb(87, 176, 228),
-      rgb(42, 110, 199));
+  background-image: linear-gradient(
+    to right,
+    rgb(87, 176, 228),
+    rgb(42, 110, 199)
+  );
   width: 100%;
 }
 
@@ -16,8 +18,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: DejaVu Sans Mono, monospace;
-  
 }
 
 .center {
@@ -43,7 +43,7 @@ header {
   height: 56px;
 }
 
-a>img {
+a > img {
   bottom: 50px;
   left: 100px;
 }
@@ -58,7 +58,7 @@ a>img {
 }
 
 .texto {
-  color: rgb(22, 51, 145);
+  color: black;
   margin: 1px;
   font-size: 66px;
   position: relative;
@@ -70,6 +70,7 @@ a>img {
   width: 50%;
   text-align: right;
   align-self: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 .menu a {
@@ -87,7 +88,7 @@ a>img {
 .botao {
   border: 0;
   background-color: black;
-  color: antiquewhite;
+  color: white;
   border-radius: 10px;
   width: 100px;
   height: 30px;
@@ -99,11 +100,9 @@ a>img {
 
 .Contatos {
   position: relative;
-  left: 39%;  
+  left: 39%;
   font-size: 30px;
   margin: 25px;
-  
-  
 }
 
 .Contatos > h3 {
@@ -115,4 +114,13 @@ a>img {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+}
+.palavra {
+  position: relative;
+  width: 453px;
+  height: 4px;
+  top: -322px;
+  left: 83px;
+  font-size: 23px;
+  font-family: Snell Roundhand, cursive;
 }
