@@ -21,7 +21,9 @@
 
 <body>
     <header style="font-size: 20px;">
-        <div>
+        <div style="height: 46px;">
+            <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
             <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
             <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
         </div>
@@ -33,8 +35,19 @@
             <a href="../login/login.html" style="vertical-align: -5px; margin-left: 13px; margin-right: 13px;">Sair</a>
         </div>
     </header>
-    <div class="BarraLateral">
-        <div class="Quadrante1">
+    <!-- <div class="BarraLateral"> -->
+    <!-- <div class="Quadrante1"> -->
+    <div class="BarraLateral offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="LateralTopo" style="height: 49px;">
+            <button id="barras3F" type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            <div>
+                <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
+                <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
+            </div>
+        </div>
+        <div class="Quadrante1 offcanvas-header">
             <p style="width: 80%; margin: 0;">Nome e Sobrenome </p>
             <div class="btn-group dropend">
                 <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,17 +61,17 @@
             <p id="e-mail" style="margin: 0;">souzaesdras@alu.ufc.br</p>
         </div>
         <div class="Quadrante2">
-            <a class="js-sair" href="../CriacaoEventos/CriacaoEventos.html"><Button>Criar novo evento</Button></a>
+            <a href="../CriacaoEventos/CriacaoEventos.html"><Button>Criar novo evento</Button></a>
         </div>
         <div class="Historico">
-            <a class="js-sair" href="../Historico/Historico.html">Historico</a>
+            <a href="../Historico/Historico.html">Historico</a>
         </div>
         <div class="Eventos">
             <a href="#">Evento</a>
             <a href="#">Aula</a>
         </div>
     </div>
-    <div class="Conteudo">
+    <div class="Conteudo" id="Conteudo">
         <h1>Historico</h1>
 
         <p>Evento</p>
@@ -66,13 +79,13 @@
             aria-expanded="false" aria-controls="collapseEvento">
         </button>
         <div class="eventos collapse" id="collapseEvento">
-            <div class="nomeEventos">
+            <div class="tabela">
                 <p>Nomes</p>
-                <a href="../Evento/Evento.html">Mostrar mais</a>
             </div>
             <div class="tabela">
                 <p>Atividades</p>
             </div>
+            <a class="mostrarMais" href="../Evento/Evento.html">Mostrar mais</a>
         </div>
 
         <p>Aula</p>
@@ -80,13 +93,13 @@
             aria-expanded="false" aria-controls="collapseAula">
         </button>
         <div class="aulas collapse" id="collapseAula">
-            <div class=" nomeAulas">
+            <div class="tabela">
                 <p>Aulas</p>
-                <a href="../Evento/Evento.html">Mostrar mais</a>
             </div>
             <div class="tabela">
                 <p>Atividades</p>
             </div>
+            <a class="mostrarMais" href="../Evento/Evento.html">Mostrar mais</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
