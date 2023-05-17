@@ -19,11 +19,11 @@ header a:hover {
 
 .BarraLateral {
     background-color: #0d0d0d;
-    border-right: 1px white solid;
+    border-right: 1px white solid !important;
 }
 
 .Quadrante1 {
-    border-bottom: 1px black solid;
+    border-bottom: 1px white solid;
     color: white;
 }
 
@@ -98,4 +98,18 @@ button.expansivo[aria-expanded="true"]:hover {
 .BtnCriar button {
     background-color: #00919B;
     color: white;
+}
+
+.LateralTopo a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.LateralTopo a:hover {
+    color: gray;
+}
+
+.barras3 {
+    background-image: url(Imagens/3BarrinhasB.png);
 }
