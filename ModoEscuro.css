@@ -43,3 +43,59 @@ header a:hover {
 .Historico>a {
     color: white;
 }
+
+/* Pagina */
+
+.Conteudo {
+    color: white;
+}
+
+.Conteudo p {
+    border-bottom: 1px white solid;
+}
+
+button.expansivo {
+    background-image: url(Imagens/SeteBaixoPreto.png);
+}
+
+button.expansivo[aria-expanded="false"]:hover {
+    background-image: url(Imagens/SeteBaixoPretoHover.png);
+}
+
+button.expansivo[aria-expanded="true"] {
+    background-image: url(Imagens/SeteCimaPreto.png);
+}
+
+button.expansivo[aria-expanded="true"]:hover {
+    background-image: url(Imagens/SeteCimaPretoHover.png);
+}
+
+.nomeEventos,
+.tabela,
+.nomeAulas {
+    border: 1px white solid;
+}
+
+.nomeEventos a,
+.nomeAulas a {
+    border: 1px solid white;
+    color: white;
+}
+
+.Perguntas {
+    background-color: #1f1f1f;
+    border: 1px white solid;
+}
+
+.Pergunta input {
+    border: 1px white solid;
+}
+
+.res {
+    background-color: #1d1d1d;
+}
+
+.BtnCriar button {
+    background-color: #00919B;
+    color: white;
+}
