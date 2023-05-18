@@ -44,6 +44,29 @@ header a:hover {
     color: white;
 }
 
+.BtnCriar button {
+    background-color: #00919B;
+    color: white;
+}
+
+.LateralTopo a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.LateralTopo a:hover {
+    color: gray;
+}
+
+.barras3 {
+    background-image: url(Imagens/3BarrinhasB.png);
+}
+
+#barras3F {
+    background-image: url(Imagens/3BarrinhasB.png);
+}
+
 /* Pagina */
 
 .Conteudo {
@@ -93,23 +116,4 @@ button.expansivo[aria-expanded="true"]:hover {
 
 .res {
     background-color: #1d1d1d;
-}
-
-.BtnCriar button {
-    background-color: #00919B;
-    color: white;
-}
-
-.LateralTopo a {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.LateralTopo a:hover {
-    color: gray;
-}
-
-.barras3 {
-    background-image: url(Imagens/3BarrinhasB.png);
 }

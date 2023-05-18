@@ -21,9 +21,11 @@
 
 <body>
     <header style="font-size: 20px;">
-        <div>
+        <div style="height: 46px;">
+            <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
             <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-            <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
+            <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
         </div>
         <div id="sair">
             <div class="switch__container">
@@ -33,15 +35,24 @@
             <a href="../login/login.html" style="vertical-align: -5px; margin-left: 13px; margin-right: 13px;">Sair</a>
         </div>
     </header>
-    <div class="BarraLateral">
-        <div class="Quadrante1">
+    <div class="BarraLateral offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="LateralTopo" style="height: 49px;">
+            <button id="barras3F" type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            <div>
+                <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
+                <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
+            </div>
+        </div>
+        <div class="Quadrante1 offcanvas-header">
             <p style="width: 80%; margin: 0;">Nome e Sobrenome </p>
             <div class="btn-group dropend">
                 <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
                     ...
                 </button>
                 <ul class="dropdown-menu" style="background-color: #f3f3f3;">
-                    <li><a class="dropdown-item" href="#">Opção da Conta</a></li>
+                    <li><a class="dropdown-item" href="../configuracoes/config.htlm">Opção da Conta</a></li>
                 </ul>
             </div>
             <br>
@@ -53,8 +64,12 @@
         <div class="Historico">
             <a href="../Historico/Historico.html">Historico</a>
         </div>
+        <div class="Eventos">
+            <a href="#">Evento</a>
+            <a href="#">Aula</a>
+        </div>
     </div>
-    <div class="Conteudo">
+    <div class="Conteudo" id="Conteudo">
         <h1>EVENTO 1</h1>
         <a href="../QRCode/QRCode.html"><button type="button" class="btn btn-outline-dark">QRCode</button></a>
         <div class="grupo">
@@ -69,4 +84,5 @@
             </div>
         </div>
     </div>
+    <script src="../ModoEscuro.js"></script>
 </body>
