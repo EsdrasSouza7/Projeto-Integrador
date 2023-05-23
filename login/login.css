@@ -5,12 +5,13 @@ body {
     justify-items: center;
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(rgb(78, 175, 255), white);
 }
 
 html {
     width: 99%;
     height: 99%;
-    background-image: linear-gradient(rgb(78, 175, 255), white);
+
 }
 
 .Logo>figure>img {
@@ -47,12 +48,12 @@ html {
     align-items: center;
     margin-top: 1px;
     width: 75%;
+    min-width: 250px;
+
 }
 
-.Login>#Entrar {
-    height: 15%;
-    width: 30%;
-    border-radius: 10%;
+.Login button {
+    border-radius: 50%;
     background-color: rgb(78, 175, 255);
     color: white;
 }

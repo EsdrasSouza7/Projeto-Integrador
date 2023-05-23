@@ -10,7 +10,7 @@ header {
     position: fixed;
 
     width: 100%;
-    top: -1px;
+    top: -2px;
     left: 0;
     z-index: 1;
 
@@ -155,14 +155,9 @@ header a:hover {
 
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
-    body {
-        background-color: #F09A9D;
-        /* Red */
-    }
-
     .BarraLateral {
-        width: 75% !important;
-        max-width: 500px !important;
+        width: 100% !important;
+        max-width: 480px !important;
         font-size: 30px;
     }
 
@@ -187,11 +182,6 @@ header a:hover {
 
 /* Tablet Styles */
 @media only screen and (min-width: 500px) and (max-width: 960px) {
-    body {
-        background-color: #F5CF8E;
-        /* Yellow */
-    }
-
     /* header {
         height: 49px;
     }

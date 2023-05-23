@@ -26,7 +26,7 @@
             <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
             <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-            <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
+            <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
         </div>
         <div id="sair">
             <div class="switch__container">
@@ -43,7 +43,7 @@
                 aria-label="Close"></button>
             <div>
                 <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-                <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
+                <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
             </div>
         </div>
         <div class="Quadrante1 offcanvas-header">
@@ -115,22 +115,38 @@
                 </div>
                 <div class="Perguntas">
                     <div class="respostas">
-                        <div class="res">
-                            4
-                        </div>
-                        <button>X</button>
-                        <div class="res">
-                            3
-                        </div>
-                        <button>X</button>
-                        <div class="res">
-                            5
-                        </div>
-                        <button>X</button>
+                        <table>
+                            <tr>
+                                <th><textarea class="AreaResposta form-control" placeholder="Respostas"
+                                        id="floatingTextarea"></textarea></th>
+                                <th><button type="button" class="btn btn-info">X</button></th>
+                            </tr>
+                            <tr>
+                                <th><textarea class="AreaResposta form-control" placeholder="Respostas"
+                                        id="floatingTextarea"></textarea></th>
+                                <th><button type="button" class="btn btn-info">X</button></th>
+                            </tr>
+                            <tr>
+                                <th><textarea class="AreaResposta form-control" placeholder="Respostas"
+                                        id="floatingTextarea"></textarea></th>
+                                <th><button type="button" class="btn btn-info">X</button></th>
+                            </tr>
+                        </table>
                     </div>
-                    <button>+</button>Adicionar Respostas
+                    <button type="button" class="btn">+ Adicionar Respostas</button>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="TiposdePerguntas">
+            <h5 style="border-bottom: 1px black solid;">Escolha o Tipo de Pergunta</h5>
+            <button type="button" class="btn">Pergunta Abertas</button><br>
+            <button type="button" class="btn">Pergunta de Multpla Escolhas</button><br>
+            <button type="button" class="btn">Pergunta de Unica Escolha</button><br>
+            <h6 style="border: 1px black solid;">Perguntas Pre-Definidas</h6>
+            <button type="button" class="btn">Perguntar Nome</button><br>
+            <button type="button" class="btn">Perguntar E-Mail</button><br>
+            <button type="button" class="btn">Perguntar gênero</button><br>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
