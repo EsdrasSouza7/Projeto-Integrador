@@ -77,6 +77,14 @@ header a:hover {
     border-bottom: 1px white solid;
 }
 
+
+/* Historico */
+
+.mostrarMais {
+    color: white;
+    border: 1px solid white;
+}
+
 button.expansivo {
     background-image: url(Imagens/SeteBaixoPreto.png);
 }
@@ -93,18 +101,13 @@ button.expansivo[aria-expanded="true"]:hover {
     background-image: url(Imagens/SeteCimaPretoHover.png);
 }
 
-.nomeEventos,
-.tabela,
-.nomeAulas {
+.tabela {
     border: 1px white solid;
 }
 
-.nomeEventos a,
-.nomeAulas a {
-    border: 1px solid white;
-    color: white;
-}
 
+
+/* CriacaoEventos */
 .Perguntas {
     background-color: #1f1f1f;
     border: 1px white solid;
@@ -114,6 +117,33 @@ button.expansivo[aria-expanded="true"]:hover {
     border: 1px white solid;
 }
 
-.res {
-    background-color: #1d1d1d;
+.AreaResposta {
+    background-color: #5e5e5e;
+    color: white;
+    border: black;
+}
+
+.Perguntas button {
+    color: white;
+}
+
+.TiposdePerguntas {
+    border: 1px white solid;
+}
+
+.TiposdePerguntas button {
+    color: white;
+    background-color: #00919B;
+}
+
+/* Evento */
+
+.tabelaE {
+    border: 1px white solid;
+    color: white;
+
+}
+
+.tabelaE a {
+    color: white;
 }

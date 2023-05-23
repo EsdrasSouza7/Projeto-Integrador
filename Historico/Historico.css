@@ -40,45 +40,35 @@ p {
     background-image: url(../Imagens/SeteCimaBrancaHover.png);
 }
 
-.eventos,
-.aulas {
+.tabelas {
     display: flex;
-    grid-template-columns: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .tabela {
-    position: relative;
-    border: 1px black solid;
     width: 30%;
-    min-width: 250px;
+    min-width: 300px;
+    max-width: 700px;
     height: 300px;
-    margin-bottom: 40px;
-    margin-left: 20px;
-
+    border: 1px black solid;
 }
 
-.tabela p {
+.tabela h5 {
     text-align: center;
+    border-bottom: 1px black solid;
 }
 
 .mostrarMais {
-    border: 1px solid black;
-    position: relative;
-    text-decoration: none;
-    color: black;
-    top: 317px;
-    left: -295px;
     width: 103px;
     height: 30px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
-    body {
-        background-color: #F09A9D;
-        /* Red */
-    }
-
     .Conteudo {
         font-size: 30px;
     }
@@ -88,5 +78,13 @@ p {
         left: 94px;
         width: 43px;
         height: 43px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .mostrarMais {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
     }
 }

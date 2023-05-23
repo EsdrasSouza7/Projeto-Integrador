@@ -7,28 +7,24 @@
     margin: 4px;
 }
 
-.Conteudo p {
-    border-bottom: 1px solid black;
-    font-size: 30px;
-    text-align: center;
-}
-
-.Conteudo h1 {
-    font-size: 40px;
-}
-
 .grupo {
     display: flex;
-    grid-template-columns: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.tabela {
-    position: relative;
+.tabelaE {
     border: 1px black solid;
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-left: 20px;
-    height: 100px;
-    max-height: 500px;
+    margin: 3px;
     width: 30%;
+    min-width: 300px;
+    height: auto;
+    max-height: 350px;
+    overflow-x: auto;
+
+}
+
+.tabelaE a {
+    color: black;
 }
