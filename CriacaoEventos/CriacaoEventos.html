@@ -100,49 +100,14 @@
             </div>
         </div>
         <h3>Perguntas:</h3>
-        <div class="PerguntasArea">
-            <div class="perguntasUnicaEscolha">
-                Pergunta de Unica Escolha
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="UnicaE">
-                    <label class="form-check-label" for="UnicaE">
-                        Resposta Anonima?
-                    </label>
-                </div>
-                <div class="Pergunta">
-                    <input class="form-control" type="text" aria-label="default input example" placeholder="Pergunta"
-                        id="NomeEvento">
-                </div>
-                <div class="Perguntas">
-                    <div class="respostas">
-                        <table>
-                            <tr>
-                                <th><textarea class="AreaResposta form-control" placeholder="Respostas"
-                                        id="floatingTextarea"></textarea></th>
-                                <th><button type="button" class="btn btn-info">X</button></th>
-                            </tr>
-                            <tr>
-                                <th><textarea class="AreaResposta form-control" placeholder="Respostas"
-                                        id="floatingTextarea"></textarea></th>
-                                <th><button type="button" class="btn btn-info">X</button></th>
-                            </tr>
-                            <tr>
-                                <th><textarea class="AreaResposta form-control" placeholder="Respostas"
-                                        id="floatingTextarea"></textarea></th>
-                                <th><button type="button" class="btn btn-info">X</button></th>
-                            </tr>
-                        </table>
-                    </div>
-                    <button type="button" class="btn">+ Adicionar Respostas</button>
-                </div>
-            </div>
+        <div class="PerguntasArea" id="PerguntasArea">
         </div>
         <br>
         <div class="TiposdePerguntas">
             <h5 style="border-bottom: 1px black solid;">Escolha o Tipo de Pergunta</h5>
             <button type="button" class="btn">Pergunta Abertas</button><br>
             <button type="button" class="btn">Pergunta de Multpla Escolhas</button><br>
-            <button type="button" class="btn">Pergunta de Unica Escolha</button><br>
+            <button type="button" class="btn" id="UnicaEscolha">Pergunta de Unica Escolha</button><br>
             <h6 style="border: 1px black solid;">Perguntas Pre-Definidas</h6>
             <button type="button" class="btn">Perguntar Nome</button><br>
             <button type="button" class="btn">Perguntar E-Mail</button><br>
@@ -152,6 +117,33 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
         integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY=" crossorigin="anonymous"></script>
     <script src="../ModoEscuro.js"></script>
+    <script src="CriacaoEvento.js"></script>
+
+    <script>
+        var o = 0;
+
+        function addResposta(num) {
+            let div = document.getElementById(`Tabela${num}`);
+            let resposta = document.createElement('tr');
+            resposta.innerHTML = `<th><textarea class="AreaResposta form-control" placeholder="Respostas"
+                        id="floatingTextarea"></textarea></th>
+                        <th><button type="button" class="btn btn-info" onclick="removerRespostas(${o})">X</button></th>`
+            div.appendChild(resposta);
+            resposta.id = `Resp${o}`
+            o++;
+        }
+
+        function removerRespostas(num) {
+            resp = document.getElementById(`Resp${num}`);
+            resp.remove();
+        }
+
+        function removerTabela(num) {
+            let div = document.getElementById(`Pergunta${num}`);
+            div.remove();
+        }
+
+    </script>
 </body>
 
 </html>
