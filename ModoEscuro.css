@@ -40,7 +40,11 @@ header a:hover {
     border-bottom: 1px white solid;
 }
 
-.Historico>a {
+.Historico button {
+    background-color: #1f1f1f;
+}
+
+.Historico button>a {
     color: white;
 }
 
@@ -73,39 +77,64 @@ header a:hover {
     color: white;
 }
 
-.Conteudo p {
+/* .Conteudo p {
     border-bottom: 1px white solid;
-}
-
+} */
 
 /* Historico */
+.HistoricoMenu {
+    border-bottom: 1px solid white;
+}
+
+.HistoricoMenu a,
+.HistoricoMenu p {
+    color: white;
+}
+
+/* Inicio */
 
 .mostrarMais {
     color: white;
     border: 1px solid white;
 }
 
-button.expansivo {
-    background-image: url(Imagens/SeteBaixoPreto.png);
+.Botaocollapshistorico button {
+    background-image: url(Imagens/SeteBaixoPreto.png) !important;
 }
 
-button.expansivo[aria-expanded="false"]:hover {
-    background-image: url(Imagens/SeteBaixoPretoHover.png);
+.Botaocollapshistorico button[aria-expanded="false"]:hover {
+    background-image: url(Imagens/SeteBaixoPretoHover.png) !important;
 }
 
-button.expansivo[aria-expanded="true"] {
-    background-image: url(Imagens/SeteCimaPreto.png);
+.Botaocollapshistorico button[aria-expanded="true"] {
+    background-image: url(Imagens/SeteCimaPreto.png) !important;
 }
 
-button.expansivo[aria-expanded="true"]:hover {
-    background-image: url(Imagens/SeteCimaPretoHover.png);
+.Botaocollapshistorico button[aria-expanded="true"]:hover {
+    background-image: url(Imagens/SeteCimaPretoHover.png) !important;
 }
 
 .tabela {
-    border: 1px white solid;
+    border: 1px white solid !important;
 }
 
+.tabela table,
+.tabela td {
+    border: 1px solid white !important;
+}
 
+.tabela th {
+    border: 2px solid white !important;
+}
+
+.mostrarMais {
+    color: white !important;
+    border: 1px solid white !important;
+}
+
+.Botaocollapshistorico {
+    border: 1px white solid !important;
+}
 
 /* CriacaoEventos */
 .Perguntas {
