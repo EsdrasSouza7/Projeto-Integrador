@@ -7,73 +7,44 @@
     margin: 4px;
 }
 
-.Conteudo h1,
-p {
+.Conteudo h1 {
     font-weight: bold;
 }
 
-.Conteudo p {
-    border-bottom: 1px black solid;
+.Botaocollapshistorico p {
+    font-size: 20px;
 }
 
-.Conteudo button {
-    position: relative;
-    bottom: 42px;
-    left: 55px;
-    width: 20px;
-    height: 20px;
-    /* border: 1px black solid; */
-    background-image: url(../Imagens/SeteBaixoBranca.png);
-    background-size: 99%;
-    background-repeat: no-repeat;
-}
-
-.Conteudo button[aria-expanded="false"]:hover {
-    background-image: url(../Imagens/SeteBaixoBrancaHover.png);
-}
-
-.Conteudo button[aria-expanded="true"] {
-    background-image: url(../Imagens/SeteCimaBranca.png);
-}
-
-.Conteudo button[aria-expanded="true"]:hover {
-    background-image: url(../Imagens/SeteCimaBrancaHover.png);
-}
-
-.tabelas {
+.column {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
-.tabela {
-    width: 30%;
-    min-width: 300px;
-    max-width: 700px;
-    height: 300px;
-    border: 1px black solid;
-}
-
-.tabela h5 {
-    text-align: center;
-    border-bottom: 1px black solid;
-}
-
-.mostrarMais {
-    width: 103px;
-    height: 30px;
-    text-decoration: none;
-    color: black;
+.HistoricoMenu button {
     border: 1px solid black;
 }
 
+.HistoricoMenu {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+
+}
+
+.HistoricoMenu a,
+.HistoricoMenu p {
+    color: black;
+    margin-right: 10px;
+    font-size: 110%;
+}
+
+/* Tipos de Tela */
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
     .Conteudo {
         font-size: 30px;
     }
 
-    .Conteudo button {
+    .Botaocollapshistorico button {
         bottom: 51px;
         left: 94px;
         width: 43px;
