@@ -105,7 +105,7 @@
         <br>
         <div class="TiposdePerguntas">
             <h5 style="border-bottom: 1px black solid;">Escolha o Tipo de Pergunta</h5>
-            <button type="button" class="btn">Pergunta Abertas</button><br>
+            <button type="button" class="btn" id="Aberta">Pergunta Abertas</button><br>
             <button type="button" class="btn">Pergunta de Multpla Escolhas</button><br>
             <button type="button" class="btn" id="UnicaEscolha">Pergunta de Unica Escolha</button><br>
             <h6 style="border: 1px black solid;">Perguntas Pre-Definidas</h6>
@@ -120,13 +120,14 @@
     <script src="CriacaoEvento.js"></script>
 
     <script>
+
         var o = 0;
 
         function addResposta(num) {
             let div = document.getElementById(`Tabela${num}`);
             let resposta = document.createElement('tr');
             resposta.innerHTML = `<th><textarea class="AreaResposta form-control" placeholder="Respostas"
-                        id="floatingTextarea"></textarea></th>
+                        id="Resposta${o}"></textarea></th>
                         <th><button type="button" class="btn btn-info" onclick="removerRespostas(${o})">X</button></th>`
             div.appendChild(resposta);
             resposta.id = `Resp${o}`
