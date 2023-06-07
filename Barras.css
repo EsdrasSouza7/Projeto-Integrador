@@ -16,7 +16,8 @@ header {
 
     border-bottom: 1px black solid;
     margin-top: 2px;
-    background-color: #f3f3f3;
+    background-color: #00000030;
+
 }
 
 header a {
@@ -59,6 +60,7 @@ header a:hover {
 
 .LateralTopo {
     display: flex;
+    height: 48px;
 }
 
 .LateralTopo a {
@@ -89,7 +91,7 @@ header a:hover {
 
     bottom: 0;
 
-    background-color: #f3f3f3;
+    background-color: #00000030;
     border-right: 1px black solid !important;
 }
 

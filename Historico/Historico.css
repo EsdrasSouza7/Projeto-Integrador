@@ -1,3 +1,9 @@
+body {
+    background: rgb(228, 228, 228);
+    /* background: rgb(214, 189, 118); */
+    /* background: rgb(189, 183, 243); */
+}
+
 .Conteudo {
     height: 100%;
     width: 74%;
