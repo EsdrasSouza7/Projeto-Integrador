@@ -25,14 +25,15 @@
             <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
             <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-            <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
+            <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
         </div>
         <div id="sair">
             <div class="switch__container">
                 <input type="checkbox" id="tema" class="switch switch-escuro">
                 <label for="tema"></label>
             </div>
-            <a href="../login/login.html" style="vertical-align: -5px; margin-left: 13px; margin-right: 13px;">Sair</a>
+            <a href="../cadastro/cadastro.html"
+                style="vertical-align: -5px; margin-left: 13px; margin-right: 13px;">Sair</a>
         </div>
     </header>
     <!-- <div class="BarraLateral"> -->
@@ -44,7 +45,7 @@
                 aria-label="Close"></button>
             <div>
                 <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-                <a href="../cadastro/cadastro.html" style="vertical-align: 16px;">QREvents</a>
+                <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
             </div>
         </div>
         <div class="Quadrante1 offcanvas-header">
@@ -64,42 +65,38 @@
             <a href="../CriacaoEventos/CriacaoEventos.html"><Button>Criar novo evento</Button></a>
         </div>
         <div class="Historico">
-            <a href="../Historico/Historico.html">Historico</a>
+            <button class="btn btn-light"><a href="../Inicio/Inicio.html">Inicio</a></button>
         </div>
-        <div class="Eventos">
-            <a href="#">Evento</a>
-            <a href="#">Aula</a>
+        <div class="Historico">
+            <button class="btn btn-light"><a href="../Historico/Historico.html">Historico</a></button>
         </div>
     </div>
     <div class="Conteudo" id="Conteudo">
         <h1>Historico</h1>
-
-        <p>Evento</p>
-        <button class="expansivo btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEvento"
-            aria-expanded="false" aria-controls="collapseEvento">
-        </button>
-        <div class="eventos collapse" id="collapseEvento">
-            <div class="tabela">
-                <p>Nomes</p>
+        <div class="column" id="todoConteudo">
+            <div class="HistoricoMenu">
+                <div>
+                    <p><a href="../Evento/Evento.html">'Nome do Evento'</a> Descrição: Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. <a href="../Evento/Evento.html"><button
+                                class="btn btn-light">ABRIR</button></a></p>
+                </div>
             </div>
-            <div class="tabela">
-                <p>Atividades</p>
+            <div class="HistoricoMenu">
+                <div>
+                    <p><a href="../Evento/Evento.html">'Nome do Evento'</a> Descrição: Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. <a href="../Evento/Evento.html"><button
+                                class="btn btn-light">ABRIR</button></a>
+                    </p>
+                </div>
             </div>
-            <a class="mostrarMais" href="../Evento/Evento.html">Mostrar mais</a>
-        </div>
-
-        <p>Aula</p>
-        <button class="expansivo btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAula"
-            aria-expanded="false" aria-controls="collapseAula">
-        </button>
-        <div class="aulas collapse" id="collapseAula">
-            <div class="tabela">
-                <p>Aulas</p>
+            <div class="HistoricoMenu">
+                <div>
+                    <p><a href="../Evento/Evento.html">'Nome do Evento'</a> Descrição: Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. <a href="../Evento/Evento.html"><button
+                                class="btn btn-light">ABRIR</button></a>
+                    </p>
+                </div>
             </div>
-            <div class="tabela">
-                <p>Atividades</p>
-            </div>
-            <a class="mostrarMais" href="../Evento/Evento.html">Mostrar mais</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"

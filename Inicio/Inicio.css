@@ -1,127 +1,216 @@
-html {
-  overflow-x: hidden;
+.Conteudo {
+    height: 100%;
+    width: 74%;
+    top: 49px;
+    left: 224px;
+    position: relative;
+    margin: 4px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: linear-gradient(
-    to right,
-    rgb(87, 176, 228),
-    rgb(42, 110, 199)
-  );
-  width: 100%;
+.flex {
+    display: flex;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.Conteudo h1,
+p {
+    font-weight: bold;
 }
 
-.center {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
+.Botaocollapshistorico p {
+    font-size: 20px;
 }
 
-.logooo {
-  margin: 2px;
+.column {
+    display: flex;
+    flex-direction: column;
+
+    .Botaocollapshistorico button {
+        position: relative;
+        top: 6px;
+        width: 20px;
+        height: 20px;
+        /* border: 1px black solid; */
+        background-image: url(../Imagens/SeteBaixoBranca.png);
+        background-size: 99%;
+        background-repeat: no-repeat;
+    }
+
+    .Botaocollapshistorico button[aria-expanded="false"]:hover {
+        background-image: url(../Imagens/SeteBaixoBrancaHover.png);
+    }
+
+    .Botaocollapshistorico button[aria-expanded="true"] {
+        background-image: url(../Imagens/SeteCimaBranca.png);
+    }
+
+    .Botaocollapshistorico button[aria-expanded="true"]:hover {
+        background-image: url(../Imagens/SeteCimaBrancaHover.png);
+    }
+
+    .Botaocollapshistorico {
+        display: flex;
+        height: 25px;
+    }
+
+    .CriadosMenu {
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+    }
+
+    .eventos {
+        border-top: 1px solid black;
+    }
+
+    .tabelas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 7px;
+    }
+
+    .tabela {
+        border: 1px solid black;
+    }
+
+    .tabela {
+        width: 30%;
+        min-width: 250px;
+        max-width: 600px;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+    .tabela table {
+        width: 100%;
+        min-width: 250px;
+        max-width: 600px;
+        height: 297px;
+    }
+
+    .tabela table,
+    .tabela td {
+        border: 1px solid black;
+    }
+
+    .tabela th {
+        border: 2px solid black;
+    }
+
+    .mostrarMais {
+        width: 103px;
+        height: 30px;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+    }
 }
 
-.logooo img {
-  position: relative;
-  width: 64px;
-  height: 53px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+
+
+    .Botaocollapshistorico button {
+        position: relative;
+        top: 6px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../Imagens/SeteBaixoBranca.png);
+        background-size: 99%;
+        background-repeat: no-repeat;
+    }
+
+    .Botaocollapshistorico button[aria-expanded="false"]:hover {
+        background-image: url(../Imagens/SeteBaixoBrancaHover.png);
+    }
+
+    .Botaocollapshistorico button[aria-expanded="true"] {
+        background-image: url(../Imagens/SeteCimaBranca.png);
+    }
+
+    .Botaocollapshistorico button[aria-expanded="true"]:hover {
+        background-image: url(../Imagens/SeteCimaBrancaHover.png);
+    }
+
+    .Botaocollapshistorico {
+        display: flex;
+        height: 30px;
+        border: 1px black solid;
+    }
+
+    .CriadosMenu {
+        margin: 2px;
+    }
+
+    .eventos {
+        border-top: 1px solid black;
+    }
+
+    .tabelas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 7px;
+    }
+
+    .tabela {
+        width: 30%;
+        min-width: 250px;
+        max-width: 600px;
+        height: 300px;
+        border: 1px solid black;
+        overflow-y: auto;
+    }
+
+    .tabela table {
+        width: 100%;
+        min-width: 250px;
+        max-width: 600px;
+        height: 297px;
+    }
+
+    .tabela table,
+    .tabela td {
+        border: 1px solid black;
+    }
+
+    .tabela th {
+        border: 2px solid black;
+    }
+
+    .mostrarMais {
+        width: 103px;
+        height: 30px;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+    }
 }
 
-header {
-  background-color: rgb(194, 215, 228);
-  width: 100%;
-  height: 56px;
+/* Usado no JavaScript */
+/* .column {} */
+
+/* Tipos de Tela */
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+    .Conteudo {
+        font-size: 30px;
+    }
+
+    .Botaocollapshistorico button {
+        bottom: 51px;
+        left: 94px;
+        width: 43px;
+        height: 43px;
+    }
 }
 
-a > img {
-  bottom: 50px;
-  left: 100px;
-}
-
-.uiux-design {
-  display: block;
-  margin: 0 auto;
-}
-
-.link {
-  direction: calc(50%);
-}
-
-.texto {
-  color: black;
-  margin: 1px;
-  font-size: 66px;
-  position: relative;
-  left: 66px;
-  top: 68px;
-}
-
-.menu {
-  width: 50%;
-  text-align: right;
-  align-self: center;
-  font-family: Comic Sans MS, Comic Sans, cursive;
-}
-
-.menu a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 15px;
-}
-
-.foto1 {
-  left: 66px;
-  top: 50px;
-}
-
-.botao {
-  border: 0;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  width: 100px;
-  height: 30px;
-  cursor: pointer;
-  position: relative;
-  top: 88px;
-  left: 266px;
-}
-
-.Contatos {
-  position: relative;
-  left: 39%;
-  font-size: 30px;
-  margin: 25px;
-}
-
-.Contatos > h3 {
-  position: relative;
-  left: 55px;
-}
-
-.Nome {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.palavra {
-  position: relative;
-  width: 453px;
-  height: 4px;
-  top: -322px;
-  left: 83px;
-  font-size: 23px;
-  font-family: Snell Roundhand, cursive;
+@media only screen and (min-width: 1500px) {
+    .mostrarMais {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+    }
 }
