@@ -1,0 +1,83 @@
+.Conteudo {
+    height: 100%;
+    width: 74%;
+    top: 49px;
+    left: 224px;
+    position: relative;
+    margin: 4px;
+}
+
+.BtnCriar {
+    left: 27%;
+    position: relative;
+}
+
+.BtnCriar button {
+    background-color: #5ff5ff;
+    border-radius: 50%;
+    width: 100px;
+}
+
+.NomedoEvento,
+.Descricao {
+    float: inline-start;
+    width: 50%;
+}
+
+.Imagem {
+    float: right;
+}
+
+.Pergunta {
+    width: 50%;
+    min-width: 400px;
+
+}
+
+.Pergunta input {
+    background-color: #d9d9d9;
+    border: 1px black solid;
+}
+
+.Perguntas {
+    width: 50%;
+    min-width: 400px;
+    background-color: #f0f0f0;
+    border: 1px black solid;
+}
+
+.respostas {
+    width: 100%;
+}
+
+.respostas>table tr {
+    border-bottom: 1px black solid;
+}
+
+table {
+    width: 100%;
+    border: 1px black solid;
+}
+
+.TiposdePerguntas {
+    width: 40%;
+    min-width: 380px;
+    border: 1px black solid;
+}
+
+.TiposdePerguntas button {
+    border: 1px black dotted;
+    background-color: #5ff5ff;
+    padding: 2px;
+    margin: 2px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .NomedoEvento,
+    .Descricao {
+        float: inline-start;
+        width: 100%;
+    }
+
+}

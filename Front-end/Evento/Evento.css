@@ -1,0 +1,30 @@
+.Conteudo {
+    height: 100%;
+    width: 80%;
+    top: 49px;
+    left: 224px;
+    position: relative;
+    margin: 4px;
+}
+
+.grupo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tabelaE {
+    border: 1px black solid;
+    margin: 3px;
+    width: 30%;
+    min-width: 300px;
+    height: auto;
+    max-height: 350px;
+    overflow-x: auto;
+
+}
+
+.tabelaE a {
+    color: black;
+}
