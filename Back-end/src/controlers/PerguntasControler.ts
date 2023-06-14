@@ -1,15 +1,15 @@
-import { PrismaClient, Usuario } from "@prisma/client";
+import { PrismaClient, Perguntas } from "@prisma/client";
 
-class UsuarioControler{
+class PerguntasControler{
     private prisma: PrismaClient;
 
     constructor(){
         this.prisma = new PrismaClient();
     }
 
-    async create(data: Omit<Usuario, 'id'>) {
+    async create(data: Omit<Perguntas, 'id'>) {
         try {
-            return this.prisma.usuario.create({
+            return this.prisma.perguntas.create({
                 data: {
                     ... data,
                 },
@@ -20,4 +20,4 @@ class UsuarioControler{
     }
 }
 
-export default UsuarioControler;
+export default PerguntasControler;
