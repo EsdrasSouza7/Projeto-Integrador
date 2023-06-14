@@ -4,8 +4,8 @@ async function main() {
     const userControler = new UserControler();
 
     const user = await userControler.create({
-        email: 'teste@email.com',
-        senha: '1234',
+        email: 'bola@email.com',
+        senha: '99999',
     });
 
     console.log(user);
