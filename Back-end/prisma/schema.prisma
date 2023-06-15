@@ -22,8 +22,8 @@ model Evento {
   nomeEvento       String
   descricao        String?
   pergunta         Perguntas[]
-  Organizador      Organizador? @relation(fields: [organizadorEmail], references: [email])
-  organizadorEmail String? @map(name:"Organizador_Email")
+  Organizador      Organizador? @relation(fields: [organizadorEmail], references: [email], onDelete: Cascade)
+  organizadorEmail String?      @map(name: "Organizador_Email")
 }
 
 model Perguntas {
@@ -31,7 +31,7 @@ model Perguntas {
   pergunta        String
   respostaUsuario RespostaUsuario[]
   resposta        Respostas[]
-  Evento          Evento?           @relation(fields: [eventoId], references: [id])
+  Evento          Evento?           @relation(fields: [eventoId], references: [id], onDelete: Cascade)
   eventoId        Int?
 }
 
@@ -39,7 +39,7 @@ model Respostas {
   id              Int               @id @default(autoincrement())
   resposta        String
   respostaUsuario RespostaUsuario[]
-  Perguntas       Perguntas?        @relation(fields: [perguntasId], references: [id])
+  Perguntas       Perguntas?        @relation(fields: [perguntasId], references: [id], onDelete: Cascade)
   perguntasId     Int?
 }
 
