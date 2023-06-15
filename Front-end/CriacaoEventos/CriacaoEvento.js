@@ -65,3 +65,29 @@ const UnicaE = document.getElementById("UnicaEscolha");
 UnicaE.addEventListener("click", function () { AddPerguntaUnica() });
 const PAberta = document.getElementById("Aberta");
 PAberta.addEventListener("click", function () { AddPerguntaAberta() });
+
+const botao1 = document.getElementById('agora')
+botao1.addEventListener('click', function () { alternarDivs() })
+
+function alternarDivs() {
+    let div1 = document.getElementById('div1');
+    let div2 = document.getElementById('div2');
+
+    div1.style.display = 'none';
+    div2.style.display = 'block';
+}
+
+const botao2 = document.getElementById('agora2')
+botao2.addEventListener('click', function () { alterar2() })
+
+function alterar2() {
+    let div1 = document.getElementById('div1');
+    let div2 = document.getElementById('div2');
+
+    div2.style.display = 'none';
+    div1.style.display = 'block';
+}
+
+
+
+
