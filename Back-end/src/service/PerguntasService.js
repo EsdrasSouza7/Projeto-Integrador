@@ -3,9 +3,9 @@ import {PrismaClient} from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function createPergunta(pergunta, evento){
-    const pergunta = await prisma.pergunta.create({
+    const perguntas = await prisma.perguntas.create({
         data: {
-            pergunta,
+            perguntas,
             eventoId: evento.id,
         },
     });
@@ -13,7 +13,7 @@ async function createPergunta(pergunta, evento){
 }
 
 async function findPerguntaById(id) {
-    return prisma.pergunta.findUnique({
+    return prisma.perguntas.findUnique({
         where: {id: Number(id)}
     });
 }
