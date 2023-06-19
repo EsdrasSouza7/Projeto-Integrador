@@ -2,10 +2,10 @@ import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-async function createResposta(resposta, pergunta){
-    const resposta = await prisma.resposta.create({
+async function createResposta(respostas, pergunta){
+    const resposta = await prisma.respostas.create({
         data: {
-            resposta,
+            respostas,
             perguntaId: pergunta.id,
         },
     });
@@ -13,7 +13,7 @@ async function createResposta(resposta, pergunta){
 }
 
 async function findRespostaById(id) {
-    return prisma.resposta.findUnique({
+    return prisma.respostas.findUnique({
         where: {id: Number(id)}
     });
 }

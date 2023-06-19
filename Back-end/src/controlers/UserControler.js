@@ -1,8 +1,8 @@
-const usuarioService = require('../service/UsuarioService');
+const usuarioService = require('../service/UserService');
 
 async function createUsuario(req, res) {
     try {
-        const {name, email} = req.body
+        const {email, senha} = req.body
         let usuario = await usuarioService.findUsuarioByEmail(email);
 
         if (usuario) {
@@ -13,7 +13,7 @@ async function createUsuario(req, res) {
             });
         }
 
-        usuario = await usuarioService.createUsuario(name, email)
+        usuario = await usuarioService.createUsuario(email, senha)
 
         return res.json({
             success: true,

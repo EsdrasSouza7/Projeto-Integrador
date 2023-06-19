@@ -2,9 +2,9 @@ const respostaService = require('../service/RespostasService')
 
 async function createResposta(req, res) {
     try {
-        const {resposta, pergunta} = req.body
+        const {respostas, perguntas} = req.body
 
-        resposta = await respostaService.createResposta(resposta, pergunta)
+        resposta = await respostaService.createResposta(respostas, perguntas)
 
         return res.json({
             success: true,
