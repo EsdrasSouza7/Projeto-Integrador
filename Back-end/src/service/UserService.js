@@ -29,7 +29,7 @@ async function findUsuarioById(id) {
     
 }
 
-async function updateUsuario(id , senha, email) {
+async function updateUsuario(id , email, senha) {
 
     const user = await prisma.usuario.update({
         where: { id: Number(id) },

@@ -20,7 +20,7 @@ async function findEventoById(id) {
     
 }
 
-async function updateEvento(id , nomeEvento, descricao) {
+async function updateEvento(id, nomeEvento, descricao) {
 
     const user = await prisma.evento.update({
         where: { id: Number(id) },
