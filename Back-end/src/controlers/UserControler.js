@@ -54,9 +54,9 @@ async function findUsuario(req, res){
 async function updateUsuario(req, res){
     try {
         const {id} = req.params;
-        const {name, email} = req.body;
+        const {email, senha} = req.body;
 
-        let usuario = await usuarioService.updaUteusuario(id);
+        let usuario = await usuarioService.updateUsuario(id);
 
         if (!usuario){
             return res.json({
@@ -65,7 +65,7 @@ async function updateUsuario(req, res){
                 message: "Could not update this usuario",
             });
         }
-        usuario = await usuarioService.updateUsuario(id, name, email);
+        usuario = await usuarioService.updateUsuario(id, email, senha);
 
         return res.json({
             success: true,

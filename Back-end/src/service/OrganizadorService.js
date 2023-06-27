@@ -31,12 +31,12 @@ async function findOrganizadorById(id) {
 
 async function updateOrganizador(id , senha, email) {
 
-    const user = await prisma.organizador.update({
+    const organizador = await prisma.organizador.update({
         where: { id: Number(id) },
         data: {email, senha }
     });
 
-    return user;
+    return organizador;
 }
 
 async function deleteOrganizadorById(id) {

@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Organizador {
-  id     Int      @default(autoincrement())
-  email  String   @id @unique
+  id     Int      @id @default(autoincrement())
+  email  String   @unique
   senha  String
   evento Evento[]
 }

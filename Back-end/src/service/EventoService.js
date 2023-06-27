@@ -7,7 +7,7 @@ async function createEvento(nomeEvento, descricao, organizador){
         data: {
             nomeEvento,
             descricao,
-            organizadorEmail: organizador.email,
+            organizador
         },
     });
     return evento;

@@ -1,10 +1,14 @@
 const eventoService = require('../service/EventoService')
+const organizadorService = require('../service/OrganizadorService')
 
 async function createEvento(req, res) {
     try {
-        const {nomeEvento, descricao, organizador} = req.body
 
-        evento = await eventoService.createEvento(nomeEvento, descricao, organizador)
+        const {nomeEvento, descricao, organizadorId} = req.body
+
+        // const organizador = organizadorService.findOrganizadorById(organizadorId)
+
+        evento = await eventoService.createEvento(nomeEvento, descricao, organizadorId)
 
         return res.json({
             success: true,

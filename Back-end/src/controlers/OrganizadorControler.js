@@ -2,7 +2,7 @@ const organizadorService = require('../service/OrganizadorService');
 
 async function createOrganizador(req, res) {
     try {
-        const {name, email} = req.body
+        const {email, senha} = req.body
         let organizador = await organizadorService.findOrganizadorByEmail(email);
 
         if (organizador) {
@@ -13,7 +13,7 @@ async function createOrganizador(req, res) {
             });
         }
 
-        organizador = await organizadorService.createOrganizador(name, email)
+        organizador = await organizadorService.createOrganizador(email, senha)
 
         return res.json({
             success: true,
@@ -27,7 +27,7 @@ async function createOrganizador(req, res) {
 }
 
 async function findOrganizador(req, res){
-    try {
+    // try {
         const {id} = req.params;
         const organizador = await organizadorService.findOrganizadorById(id);
 
@@ -45,16 +45,16 @@ async function findOrganizador(req, res){
             message: "organizador found successfully",
         });
 
-    }catch (error) {
-        return res.json({error})
+    // }catch (error) {
+    //     return res.json({error})
 
-    }
+    // }
 }
 
 async function updateOrganizador(req, res){
     try {
         const {id} = req.params;
-        const {name, email} = req.body;
+        const {email, senha} = req.body;
 
         let organizador = await organizadorService.updateOrganizador(id);
 
@@ -65,7 +65,7 @@ async function updateOrganizador(req, res){
                 message: "Could not update this organizador",
             });
         }
-        organizador = await organizadorService.updateOrganizador(id, name, email);
+        organizador = await organizadorService.updateOrganizador(id, email, senha);
 
         return res.json({
             success: true,

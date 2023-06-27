@@ -4,6 +4,6 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/respostas', respostasControler.createResposta);
-router.get('/respostas/:id', respostasControler.findRespostaById);
+router.get('/respostas/:id', respostasControler.findResposta);
 
 module.exports = router;
