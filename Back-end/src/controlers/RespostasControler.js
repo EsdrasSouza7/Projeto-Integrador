@@ -17,13 +17,31 @@ async function createResposta(req, res) {
     }
 }
 
-async function findRespostaById(id) {
-    return prisma.resposta.findUnique({
-        where: {id: Number(id)}
-    });
-    
+async function findResposta(req, res){
+    try {
+        const {id} = req.params;
+        const resposta = await respostaService.findRespostaById(id);
+
+        if (!resposta){
+            return res.json({
+                    success: false,
+                    data: {},
+                    message: "Could not find this resposta",
+            });
+        }
+
+        return res.json({
+            success: true,
+            data: resposta,
+            message: "resposta found successfully",
+        });
+
+    }catch (error) {
+        return res.json({error})
+
+    }
 }
 module.exports = {
     createResposta,
-    findRespostaById,
+    findResposta,
 };

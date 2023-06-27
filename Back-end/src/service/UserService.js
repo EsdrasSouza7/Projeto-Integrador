@@ -34,7 +34,7 @@ async function updateUsuario(id , email, senha) {
     const user = await prisma.usuario.update({
         where: { id: Number(id) },
         data: {email, senha }
-    });
+    })
 
     return user;
 }
