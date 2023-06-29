@@ -2,18 +2,22 @@ const perguntaService = require('../service/PerguntasService')
 
 async function createPergunta(req, res) {
     try {
-        const {pergunta, evento} = req.body
+        const {pergunta, eventoId} = req.body
 
-        pergunta = await perguntaService.createPergunta(pergunta, evento)
+        const perguntas = await perguntaService.createPergunta(pergunta, eventoId)
 
         return res.json({
             success: true,
-            data: pergunta,
+            data: perguntas,
             message: "pergunta created successfully",
         });
 
     } catch (error) {
-        return res.json({error})
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 
@@ -37,11 +41,42 @@ async function findPergunta(req, res){
         });
 
     }catch (error) {
-        return res.json({error})
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
+    }
+}
+async function deletePergunta(req, res) {
+    try {
+        const { id } = req.params;
 
+        const pergunta = await perguntaService.findPerguntaById(id);
+        if (!pergunta){
+            return res.json({
+                success: false,
+                data: {},
+                message: "Could not find this pergunta",
+            });
+        }
+
+        await perguntaService.deletePerguntaById(id);
+        return res.json({
+            success: true,
+            data: pergunta,
+            message: "pergunta deleted successfully",
+        });
+    } catch (error) {
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 module.exports = {
     createPergunta,
     findPergunta,
+    deletePergunta,
 };

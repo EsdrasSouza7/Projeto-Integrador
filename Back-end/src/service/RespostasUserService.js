@@ -2,12 +2,12 @@ import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-async function createRespostaUsuario(usuario, resposta, pergunta){
+async function createRespostaUsuario(usuarioId, perguntasId, respostasId){
     const respostaUsuario = await prisma.respostaUsuario.create({
         data: {
-            usuarioId: usuario.id,
-            perguntaId: pergunta.id,
-            respostaId: resposta.id,
+            usuarioId,
+            perguntasId,
+            respostasId
         },
     });
     return respostaUsuario;

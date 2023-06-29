@@ -2,12 +2,12 @@ import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-async function createEvento(nomeEvento, descricao, organizador){
+async function createEvento(nomeEvento, descricao, organizadorEmail){
     const evento = await prisma.evento.create({
         data: {
             nomeEvento,
             descricao,
-            organizador
+            organizadorEmail
         },
     });
     return evento;

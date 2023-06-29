@@ -2,14 +2,14 @@ import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-async function createPergunta(pergunta, evento){
+async function createPergunta(pergunta, eventoId){
     const perguntas = await prisma.perguntas.create({
         data: {
-            perguntas,
-            eventoId: evento.id,
+            pergunta,
+            eventoId,
         },
     });
-    return pergunta;
+    return perguntas;
 }
 
 async function findPerguntaById(id) {
@@ -17,7 +17,12 @@ async function findPerguntaById(id) {
         where: {id: Number(id)}
     });
 }
+async function deletePerguntaById(id) {
+
+    return prisma.perguntas.delete({where: {id: Number(id)}});
+}
 module.exports = {
     createPergunta,
     findPerguntaById,
+    deletePerguntaById,
 };

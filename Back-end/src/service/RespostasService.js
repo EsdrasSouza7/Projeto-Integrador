@@ -2,14 +2,14 @@ import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-async function createResposta(respostas, pergunta){
-    const resposta = await prisma.respostas.create({
+async function createResposta(resposta, perguntasId){
+    const respostas = await prisma.respostas.create({
         data: {
-            respostas,
-            perguntaId: pergunta.id,
+            resposta,
+            perguntasId,
         },
     });
-    return resposta;
+    return respostas;
 }
 
 async function findRespostaById(id) {
@@ -17,7 +17,13 @@ async function findRespostaById(id) {
         where: {id: Number(id)}
     });
 }
+
+async function deleteRespostaById(id) {
+
+    return prisma.respostas.delete({where: {id: Number(id)}});
+}
 module.exports = {
     createResposta,
     findRespostaById,
+    deleteRespostaById,
 };
