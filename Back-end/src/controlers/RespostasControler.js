@@ -2,18 +2,22 @@ const respostaService = require('../service/RespostasService')
 
 async function createResposta(req, res) {
     try {
-        const {respostas, perguntas} = req.body
+        const {resposta, perguntasId} = req.body
 
-        resposta = await respostaService.createResposta(respostas, perguntas)
+        const respostas = await respostaService.createResposta(resposta, perguntasId)
 
         return res.json({
             success: true,
-            data: resposta,
+            data: respostas,
             message: "resposta created successfully",
         });
 
     } catch (error) {
-        return res.json({error})
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 
@@ -41,7 +45,36 @@ async function findResposta(req, res){
 
     }
 }
+
+async function deleteResposta(req, res) {
+    try {
+        const { id } = req.params;
+
+        const resposta = await respostaService.findRespostaById(id);
+        if (!resposta){
+            return res.json({
+                success: false,
+                data: {},
+                message: "Could not find this resposta",
+            });
+        }
+
+        await respostaService.deleteRespostaById(id);
+        return res.json({
+            success: true,
+            data: resposta,
+            message: "resposta deleted successfully",
+        });
+    } catch (error) {
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
+    }
+}
 module.exports = {
     createResposta,
     findResposta,
+    deleteResposta,
 };

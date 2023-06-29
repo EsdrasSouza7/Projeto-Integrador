@@ -2,18 +2,23 @@ const respostaUsuarioService = require('../service/RespostasUserService')
 
 async function createRespostaUsuario(req, res) {
     try {
-        const {usuario, pergunta, resposta} = req.body
 
-        const respostaUsuario = await respostaUsuarioService.createRespostaUsuario(usuario, pergunta, resposta)
+        const {usuarioId, perguntasId, respostasId} = req.body
+
+        const respostaUsuario = await respostaUsuarioService.createRespostaUsuario(usuarioId, perguntasId, respostasId)
 
         return res.json({
             success: true,
             data: respostaUsuario,
-            message: "resposta usuario created successfully",
+            message: "respostaUsuario created successfully",
         });
 
     } catch (error) {
-        return res.json({error})
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 

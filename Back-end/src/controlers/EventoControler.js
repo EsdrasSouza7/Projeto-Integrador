@@ -1,14 +1,11 @@
 const eventoService = require('../service/EventoService')
-const organizadorService = require('../service/OrganizadorService')
 
 async function createEvento(req, res) {
     try {
 
-        const {nomeEvento, descricao, organizadorId} = req.body
+        const {nomeEvento, descricao, organizadorEmail} = req.body
 
-        // const organizador = organizadorService.findOrganizadorById(organizadorId)
-
-        evento = await eventoService.createEvento(nomeEvento, descricao, organizadorId)
+        evento = await eventoService.createEvento(nomeEvento, descricao, organizadorEmail)
 
         return res.json({
             success: true,
@@ -17,7 +14,11 @@ async function createEvento(req, res) {
         });
 
     } catch (error) {
-        return res.json({error})
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 
@@ -41,15 +42,18 @@ async function findEvento(req, res){
         });
 
     }catch (error) {
-        return res.json({error})
-
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 
 async function updateEvento(req, res){
     try {
         const {id} = req.params;
-        const {name, email} = req.body;
+        const {nomeEvento, descricao} = req.body;
 
         let evento = await eventoService.updateEvento(id);
 
@@ -60,7 +64,7 @@ async function updateEvento(req, res){
                 message: "Could not update this evento",
             });
         }
-        evento = await eventoService.updateEvento(id, name, email);
+        evento = await eventoService.updateEvento(id, nomeEvento, descricao);
 
         return res.json({
             success: true,
@@ -69,8 +73,11 @@ async function updateEvento(req, res){
         });
 
     }catch (error) {
-        return res.json({error})
-
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 async function deleteEvento(req, res) {
@@ -93,7 +100,11 @@ async function deleteEvento(req, res) {
             message: "evento deleted successfully",
         });
     } catch (error) {
-        return res.json({ error });
+        const erroJson = {
+            error: error.message,
+            stack: error.stack,
+        };
+        return res.json({erroJson})
     }
 }
 
