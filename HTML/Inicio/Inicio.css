@@ -1,3 +1,8 @@
+body {
+    background-image: linear-gradient(rgb(78, 175, 255), white);
+}
+
+
 .Conteudo {
     height: 100%;
     width: 74%;
@@ -213,4 +218,14 @@ p {
         height: 60px;
         font-size: 25px;
     }
+}
+.inovar{
+    color: rgb(0, 0, 0);
+    font-size: 500%;
+}
+.baixo {
+    font-size: 200%;
+    border: 100%;
+    color: black;
+    margin: 3%;
 }
