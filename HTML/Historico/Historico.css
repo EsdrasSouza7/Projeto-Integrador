@@ -1,3 +1,8 @@
+body {
+    background-image: linear-gradient(rgb(78, 175, 255), white);
+}
+
+
 .Conteudo {
     height: 100%;
     width: 74%;
@@ -58,4 +63,38 @@
         height: 60px;
         font-size: 25px;
     }
+}
+#divBusca{
+    background-color:#5998cc;
+    border:solid 1px none;
+    border-radius:15px;
+    width:300px;
+    max-width: 500px; 
+    max-height: 150px
+
+
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:3px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:40px;
+    width:200px;
+  }
+#divBusca button{
+width: 40px;
+height: 50px;
+background-image: url("../Imagens/16492-removebg-preview.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+position: relative;
+background-color: initial;
+border: 0px;
+left: 50px;
+
 }
