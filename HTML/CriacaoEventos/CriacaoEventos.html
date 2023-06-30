@@ -25,9 +25,11 @@
         <div style="height: 46px;">
             <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
-            <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-            <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
+            <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents" style="margin-left: 2.5px;">
+            <a href="../PaginaInicial/PaginaInicial.html" style="vertical-align: 16px;">QREvents</a>
         </div>
+
+
         <div id="sair">
             <div class="switch__container">
                 <input type="checkbox" id="tema" class="switch switch-escuro">
@@ -38,12 +40,12 @@
     </header>
     <div class="BarraLateral offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false"
         tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="LateralTopo" style="height: 49px;">
+        <div class="LateralTopo">
             <button id="barras3F" type="button" class="btn-close" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
             <div>
                 <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
-                <a href="../Inicio/Inicio.html" style="vertical-align: 16px;">QREvents</a>
+                <a href="../PaginaInicial/PaginaInicial.html" style="vertical-align: 16px;">QREvents</a>
             </div>
         </div>
         <div class="Quadrante1 offcanvas-header">
@@ -69,44 +71,55 @@
             <button class="btn btn-light"><a href="../Historico/Historico.html">Historico</a></button>
         </div>
     </div>
+
+
     <!-- Conteudo -->
     <div class="Conteudo" id="Conteudo">
-        <h1>Novo Evento</h1>
-        <h3>Detalhes: <a class="BtnCriar" href="../Evento/Evento.html" id="btn"><button>Criar</button></a></h3>
-        <div class="Detalhes">
-            <div class="Imagem">
-                <label for="formFile" class="form-label">Adicione uma Imagem</label>
-                <input class="form-control" type="file" id="formFile" lang="pt-Br"
-                    accept="image/x-png,image/gif,image/jpeg">
-            </div>
-            <div class="NomedoEvento">
-                <label for="NomeEvento" class="form-label">Nome do Evento</label>
-                <input class="form-control" type="text" aria-label="default input example" id="NomeEvento">
-            </div>
-            <div class="Descricao">
-                <label for="descricao" class="form-label">Descrição</label>
-                <textarea class="form-control" id="descricao" rows="3"></textarea>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="ContaQRE">
-                <label class="form-check-label" for="ContaQRE">
-                    Pedir Conta no QREvents
-                </label>
+        <div id="div1">
+            <h1>Novo Evento</h1>
+            <h3>Detalhes
+            </h3>
+            <div class="Detalhes">
+                <div class="Imagem">
+                    <label for="formFile" class="form-label">Adicione logo (opcional)</label>
+                    <input class="form-control" type="file" id="formFile" lang="pt-Br"
+                        accept="image/x-png,image/gif,image/jpeg">
+                </div>
+                <div class="NomedoEvento">
+                    <label for="NomeEvento" class="form-label">Nome do Evento</label>
+                    <input class="form-control" type="text" aria-label="default input example" id="NomeEvento">
+                </div>
+                <div class="Descricao">
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="descricao" rows="3"></textarea>
+                    <button id="agora">Criar</button>
+                    </a>
+
+                </div>
             </div>
         </div>
-        <h3>Perguntas:</h3>
-        <div class="PerguntasArea" id="PerguntasArea">
-        </div>
-        <br>
-        <div class="TiposdePerguntas">
-            <h5 style="border-bottom: 1px black solid;">Escolha o Tipo de Pergunta</h5>
-            <button type="button" class="btn" id="Aberta">Pergunta Abertas</button><br>
-            <button type="button" class="btn">Pergunta de Multpla Escolhas</button><br>
-            <button type="button" class="btn" id="UnicaEscolha">Pergunta de Unica Escolha</button><br>
-            <h6 style="border: 1px black solid;">Perguntas Pre-Definidas</h6>
-            <button type="button" class="btn">Perguntar Nome</button><br>
-            <button type="button" class="btn">Perguntar E-Mail</button><br>
-            <button type="button" class="btn">Perguntar gênero</button><br>
+
+
+        <div id="div2" style="display: none;">
+            <button id="agora2">
+                <img src="../Imagens/png-transparent-encapsulated-postscript-computer-icons-logo-back-button-miscellaneous-angle-triangle-thumbnail-removebg-preview.png"
+                    alt="Descrição da imagem">
+            </button>
+
+            <h3>Perguntas:</h3>
+            <div class="PerguntasArea" id="PerguntasArea">
+            </div>
+            <br>
+            <div class="TiposdePerguntas">
+                <h5 style="border-bottom: 1px black solid;">Escolha o Tipo de Pergunta</h5>
+                <button type="button" class="btn" id="Aberta">Pergunta Abertas</button><br>
+                <button type="button" class="btn">Pergunta de Multpla Escolhas</button><br>
+                <button type="button" class="btn" id="UnicaEscolha">Pergunta de Unica Escolha</button><br>
+                <h6 style="border: 1px black solid;">Perguntas Pre-Definidas</h6>
+                <button type="button" class="btn">Perguntar Nome</button><br>
+                <button type="button" class="btn">Perguntar E-Mail</button><br>
+                <button type="button" class="btn">Perguntar gênero</button><br>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
@@ -140,6 +153,9 @@
         }
 
     </script>
+    </div>
+</body>
+
 </body>
 
 </html>
