@@ -1,7 +1,24 @@
-# Projeto-Integrador 
+# front-end
 
-Alunos: Cauâ, Esdras e Luan
+## Project setup
+```
+npm install
+```
 
-Assunto: Site de Chamda Via QRCode
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Pesquisa e Desenvolvimento UFC
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
