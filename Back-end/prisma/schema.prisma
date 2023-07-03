@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Organizador {
+  id     Int      @id @default(autoincrement())
+  email  String   @unique
+  senha  String
+  evento Evento[]
+}
+
+model Evento {
+  id               Int          @id @default(autoincrement())
+  nomeEvento       String
+  descricao        String?
+  pergunta         Perguntas[]
+  Organizador      Organizador? @relation(fields: [organizadorEmail], references: [email], onDelete: Cascade)
+  organizadorEmail String?      @map(name: "Organizador_Email")
+}
+
+model Perguntas {
+  id              Int               @id @default(autoincrement())
+  pergunta        String
+  respostaUsuario RespostaUsuario[]
+  resposta        Respostas[]
+  Evento          Evento?           @relation(fields: [eventoId], references: [id], onDelete: Cascade)
+  eventoId        Int?
+}
+
+model Respostas {
+  id              Int               @id @default(autoincrement())
+  resposta        String
+  respostaUsuario RespostaUsuario[]
+  Perguntas       Perguntas?        @relation(fields: [perguntasId], references: [id], onDelete: Cascade)
+  perguntasId     Int?
+}
+
+model RespostaUsuario {
+  id          Int        @id @default(autoincrement())
+  Usuario     Usuario?   @relation(fields: [usuarioId], references: [id])
+  usuarioId   Int?       @map(name: "Usuario_id")
+  Respostas   Respostas? @relation(fields: [respostasId], references: [id])
+  respostasId Int?       @map(name: "Respostas_id")
+  Perguntas   Perguntas? @relation(fields: [perguntasId], references: [id])
+  perguntasId Int?       @map(name: "Perguntas_id")
+}
+
+model Usuario {
+  id              Int               @id @default(autoincrement())
+  email           String            @unique
+  senha           String
+  respostaUsuario RespostaUsuario[]
+}

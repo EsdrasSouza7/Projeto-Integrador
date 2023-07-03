@@ -1,0 +1,100 @@
+body {
+    background-image: linear-gradient(rgb(78, 175, 255), white);
+}
+
+
+.Conteudo {
+    height: 100%;
+    width: 74%;
+    top: 49px;
+    left: 224px;
+    position: relative;
+    margin: 4px;
+}
+
+.Conteudo h1 {
+    font-weight: bold;
+}
+
+.Botaocollapshistorico p {
+    font-size: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.HistoricoMenu button {
+    border: 1px solid black;
+}
+
+.HistoricoMenu {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+
+}
+
+.HistoricoMenu a,
+.HistoricoMenu p {
+    color: black;
+    margin-right: 10px;
+    font-size: 110%;
+}
+
+/* Tipos de Tela */
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+    .Conteudo {
+        font-size: 30px;
+    }
+
+    .Botaocollapshistorico button {
+        bottom: 51px;
+        left: 94px;
+        width: 43px;
+        height: 43px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .mostrarMais {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+    }
+}
+#divBusca{
+    background-color:#5998cc;
+    border:solid 1px none;
+    border-radius:15px;
+    width:300px;
+    max-width: 500px; 
+    max-height: 150px
+
+
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:3px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:40px;
+    width:200px;
+  }
+#divBusca button{
+width: 40px;
+height: 50px;
+background-image: url("../Imagens/16492-removebg-preview.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+position: relative;
+background-color: initial;
+border: 0px;
+left: 50px;
+
+}
