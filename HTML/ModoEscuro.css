@@ -32,6 +32,10 @@ header a:hover {
     color: white;
 }
 
+.Quadrante2 button:hover {
+    background-color: #015f66;
+}
+
 .Eventos>a {
     color: white;
 }
@@ -44,7 +48,7 @@ header a:hover {
     background-color: #1f1f1f;
 }
 
-.Historico button>a {
+.Historico a>button {
     color: white;
 }
 

@@ -33,6 +33,36 @@ function AddPerguntaUnica() {
     i++;
 }
 
+function AddPerguntaMultpla() {
+    let div = document.createElement('div');
+    div.innerHTML = `<div class="perguntasMultplaEscolha">
+                Pergunta de Multipla Escolha
+                <div class= "form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="RespostaAnonima${i}">
+                    <label class="form-check-label" for="RespostaAnonima${i}">
+                        Resposta Anonima?
+                    </label>
+                </div>
+                <div class="Pergunta">
+                    <input class="form-control" type="text" aria-label="default input example" placeholder="Pergunta"
+                        id="NomePergunta${i}">
+                </div>
+                <div class="Perguntas">
+                    <div class="respostas">
+                        <table id="Tabela${i}">
+                        </table>
+                    </div>
+                    <button style="margin-right: 30%;" type="button" class="btn btn-primary" onclick="addResposta(${i})">+ Adicionar
+                        Respostas</button>
+                    <button type="button" class="btn btn-danger" onclick="removerTabela(${i})">x Excluir Tabela</button>
+                </div>
+            </div >
+            <hr>`;
+    AreaPergunta.appendChild(div);
+    div.id = `Pergunta${i}`
+    i++;
+}
+
 function AddPerguntaAberta() {
     let div = document.createElement('div');
     div.innerHTML = `<div class="perguntasAbertas">
@@ -58,14 +88,14 @@ function AddPerguntaAberta() {
     i++;
 }
 
-
-
-
 const UnicaE = document.getElementById("UnicaEscolha");
 UnicaE.addEventListener("click", function () { AddPerguntaUnica() });
 const PAberta = document.getElementById("Aberta");
 PAberta.addEventListener("click", function () { AddPerguntaAberta() });
+const Multpla = document.getElementById("MultplaEscolha");
+Multpla.addEventListener("click", function () { AddPerguntaMultpla() });
 
+// Alternar DIVS
 const botao1 = document.getElementById('agora')
 botao1.addEventListener('click', function () { alternarDivs() })
 

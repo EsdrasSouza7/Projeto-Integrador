@@ -1,5 +1,6 @@
 body {
-    background-image: linear-gradient(rgb(78, 175, 255), white);
+    /* background-image: linear-gradient(rgb(78, 175, 255), white); */
+    background-color: white;
 }
 
 
@@ -219,10 +220,12 @@ p {
         font-size: 25px;
     }
 }
-.inovar{
+
+.inovar {
     color: rgb(0, 0, 0);
     font-size: 500%;
 }
+
 .baixo {
     font-size: 200%;
     border: 100%;

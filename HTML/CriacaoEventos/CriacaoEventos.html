@@ -25,22 +25,24 @@
         <div style="height: 46px;">
             <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
-            <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents" style="margin-left: 2.5px;">
+            <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
             <a href="../PaginaInicial/PaginaInicial.html" style="vertical-align: 16px;">QREvents</a>
+
         </div>
-
-
         <div id="sair">
             <div class="switch__container">
                 <input type="checkbox" id="tema" class="switch switch-escuro">
                 <label for="tema"></label>
             </div>
-            <a href="../login/login.html" style="vertical-align: -5px; margin-left: 13px; margin-right: 13px;">Sair</a>
+            <a href="../PaginaInicial/PaginaInicial.html"
+                style="vertical-align: -5px; margin-left: 13px; margin-right: 13px;">Sair</a>
         </div>
     </header>
+    <!-- <div class="BarraLateral"> -->
+    <!-- <div class="Quadrante1"> -->
     <div class="BarraLateral offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false"
         tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="LateralTopo">
+        <div class="LateralTopo" style="height: 49px;">
             <button id="barras3F" type="button" class="btn-close" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
             <div>
@@ -65,10 +67,10 @@
             <a href="../CriacaoEventos/CriacaoEventos.html"><Button>Criar novo evento</Button></a>
         </div>
         <div class="Historico">
-            <button class="btn btn-light"><a href="../Inicio/Inicio.html">Inicio</a></button>
+            <a href="../Inicio/Inicio.html"><button class="btn btn-light">Inicio</button></a>
         </div>
         <div class="Historico">
-            <button class="btn btn-light"><a href="../Historico/Historico.html">Historico</a></button>
+            <a href="../Historico/Historico.html"><button class="btn btn-light">Historico</button></a>
         </div>
     </div>
 
@@ -92,33 +94,45 @@
                 <div class="Descricao">
                     <label for="descricao" class="form-label">Descrição</label>
                     <textarea class="form-control" id="descricao" rows="3"></textarea>
-                    <button id="agora">Criar</button>
+                    <button id="agora">Proximo</button>
                     </a>
 
                 </div>
             </div>
         </div>
 
-
         <div id="div2" style="display: none;">
             <button id="agora2">
-                <img src="../Imagens/png-transparent-encapsulated-postscript-computer-icons-logo-back-button-miscellaneous-angle-triangle-thumbnail-removebg-preview.png"
-                    alt="Descrição da imagem">
+                <img src="../Imagens/SetinhaParaEsquerda.png" alt="Descrição da imagem">
             </button>
+            <center><a href="../Evento/Evento.html"><button class="btn btn-success">CRIAR</button></a></center>
 
             <h3>Perguntas:</h3>
             <div class="PerguntasArea" id="PerguntasArea">
+                <div class="perguntasAbertas">
+                    Pergunta Nome/Email
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="RespostaAnonima">
+                        <label class="form-check-label" for="RespostaAnonima">
+                            Resposta Anonima?
+                        </label>
+                    </div>
+                    <div class="Pergunta">
+                        <input class="form-control" type="text" aria-label="default input example"
+                            placeholder="Pergunta" id="Nome/Email" value="Qual o seu Nome/Email">
+                    </div>
+                    <div class="Perguntas">
+                        <p>Quantidade Maxima de caracter: <input type="number" id="QtdMaxCar${i}" value="500"></p>
+                    </div>
+                </div>
+                <hr>
             </div>
             <br>
             <div class="TiposdePerguntas">
                 <h5 style="border-bottom: 1px black solid;">Escolha o Tipo de Pergunta</h5>
                 <button type="button" class="btn" id="Aberta">Pergunta Abertas</button><br>
-                <button type="button" class="btn">Pergunta de Multpla Escolhas</button><br>
+                <button type="button" class="btn" id="MultplaEscolha">Pergunta de Multpla Escolhas</button><br>
                 <button type="button" class="btn" id="UnicaEscolha">Pergunta de Unica Escolha</button><br>
-                <h6 style="border: 1px black solid;">Perguntas Pre-Definidas</h6>
-                <button type="button" class="btn">Perguntar Nome</button><br>
-                <button type="button" class="btn">Perguntar E-Mail</button><br>
-                <button type="button" class="btn">Perguntar gênero</button><br>
             </div>
         </div>
     </div>
@@ -153,7 +167,6 @@
         }
 
     </script>
-    </div>
 </body>
 
 </body>
