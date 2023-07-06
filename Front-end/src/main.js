@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './pages/home.vue';
+// import router from "@/plugins/vuerouter";
 
-createApp(App).mount('#app')
+// const app = new VueElement({
+//     router
+// }).$mount('#app');
+
+createApp(App).mount('#app');
