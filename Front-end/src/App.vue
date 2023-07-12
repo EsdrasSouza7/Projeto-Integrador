@@ -1,5 +1,4 @@
 <template>
-  <!DOCTYPE html>
   <html lang="pt">
 
   <head>
@@ -10,10 +9,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="../Barras.css" type="text/css">
     <link rel="stylesheet" href="Historico.css" type="text/css">
@@ -26,7 +21,7 @@
       <div style="height: 46px;">
         <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
-        <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
+        
         <a href="../PaginaInicial/PaginaInicial.html" style="vertical-align: 16px;">QREvents</a>
 
       </div>
@@ -50,7 +45,7 @@
       <div class="LateralTopo" style="height: 49px;">
         <button id="barras3F" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         <div>
-          <img id="logo" src="../Imagens/Teste Logo QREvents loginho.jpg" alt="QREvents">
+          
           <a href="../PaginaInicial/PaginaInicial.html" style="vertical-align: 16px;">QREvents</a>
         </div>
       </div>
@@ -105,10 +100,7 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
-      integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY=" crossorigin="anonymous"></script>
-    <script src="../ModoEscuro.js"></script>
-    <script src="../Integracao.js"></script>
+      
   </body>
 
   </html>
@@ -240,7 +232,7 @@ body {
 #divBusca button {
   width: 40px;
   height: 50px;
-  background-image: url("../Imagens/16492-removebg-preview.png");
+  
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
