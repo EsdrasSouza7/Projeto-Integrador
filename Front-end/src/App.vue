@@ -1,22 +1,5 @@
 <template>
-  <html lang="pt">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historico / QREvents</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../Barras.css" type="text/css">
-    <link rel="stylesheet" href="Historico.css" type="text/css">
-    <link rel="stylesheet" href="../BotaoSwitch.css" type="text/css">
-    <link rel="stylesheet" href="../style.css" type="text/css">
-  </head>
-
-  <body>
+  <div id="app">
     <header style="font-size: 20px;">
       <div style="height: 46px;">
         <button class="btn barras3" id="barras3" type="button" data-bs-toggle="offcanvas"
@@ -101,9 +84,7 @@
       </div>
     </div>
       
-  </body>
-
-  </html>
+  </div>
 </template>
 
 <script>
